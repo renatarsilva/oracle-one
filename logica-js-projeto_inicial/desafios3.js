@@ -45,12 +45,42 @@ console.log(`voce tem ${idade} e ${verificar}`);
 
 // Crie uma variável "numero" e peça um valor com prompt verifique se é positivo, negativo ou zero. Use if-else para imprimir a respectiva mensagem.
 
+let numero = parseInt(prompt("Digite um número: "));
+
+if (numero % 2 == 0) {
+  alert("O número é par");
+} else {
+  alert("O número é impar");
+}
+
 // Use um loop while para imprimir os números de 1 a 10 no console.
 
-// Crie uma variável "nota" e atribua um valor numérico a ela. Use if-else para determinar se a nota é maior ou igual a 7 e exiba "Aprovado" ou "Reprovado" no console.
+let contagem = 1;
+
+while (contagem <= 10) {
+  console.log(contagem);
+  contagem++;
+}
+
+// Crie uma variável "nota" e atribua um valor numérico a ela.
+// Use if-else para determinar se a nota é maior ou igual a 7 e exiba "Aprovado" ou "Reprovado" no console.
+
+let nota = parseInt(prompt("Digite sua nota"));
+
+let verificar1 = nota >= 7 ? "aprovado" : "reprovado";
+console.log(verificar1);
 
 // Use o Math.random para gerar qualquer número aleatório e exiba esse número no console.
 
+let aleatório = parseInt(Math.random() * 100 + 1);
+alert(aleatório);
+
 // Use o Math.random para gerar um número inteiro entre 1 e 10 e exiba esse número no console.
 
+let aleatorio2 = parseInt(Math.random() * 10 + 1);
+console.log(aleatorio2);
+
 // Use o Math.random para gerar um número inteiro entre 1 e 1000 e exiba esse número no console.
+
+let aleatorio3 = parseInt(Math.random() * 1000 + 1);
+console.log(aleatorio3);
