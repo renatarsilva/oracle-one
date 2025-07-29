@@ -1,13 +1,18 @@
 alert("Boas vindas ao jogo do número secreto");
 
-let numeroSecreto = 5;
+//Declarar varivel
+
+let numeroSecreto = parseInt(Math.random() * 100 + 1);
 console.log(numeroSecreto);
 
-let chute;
+let chute = 0;
 let tentativas = 0;
 
+// condicao;
+
 while (chute != numeroSecreto) {
-  chute = prompt("Escolha um número entre 1 e 10");
+  chute = prompt("Escolha um número entre 1 a 100");
+  tentativas++;
 
   if (chute == numeroSecreto) {
     break;
@@ -17,16 +22,10 @@ while (chute != numeroSecreto) {
     } else {
       alert(`O número secreto é maior que ${chute}`);
     }
-    tentativas++;
   }
 }
 
-if (tentativas > 1) {
-  alert(
-    `Isso ai! você descobriu o número secreto ${numeroSecreto} com ${tentativas} tentativas`
-  );
-} else {
-  alert(
-    `Isso ai! você descobriu o número secreto ${numeroSecreto} com ${tentativas} tentativa`
-  );
-}
+let palavraTentativa = tentativas > 1 ? "tentativas" : "tentativa";
+alert(
+  `Isso ai! Você descobriu o número secreto ${numeroSecreto} com ${tentativas} ${palavraTentativa}`
+);
