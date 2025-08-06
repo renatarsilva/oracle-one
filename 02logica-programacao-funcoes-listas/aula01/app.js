@@ -1,3 +1,5 @@
+let listaDeNumerosSorteados = [];
+
 // declarar variavel numero secreto que recebe a funcao 'Gerar numero aleatorio'
 let numeroSecreto = gerarNumeroAleatorio();
 console.log(numeroSecreto);
@@ -42,7 +44,14 @@ function verificarChute() {
 
 // funcao 'gerar numero aleatorio', vai retornar um inteiro gerado pelo random, entre 1 e 10
 function gerarNumeroAleatorio() {
-  return parseInt(Math.random() * 10 + 1);
+  let numeroEscolhido = parseInt(Math.random() * 4 + 1);
+  if (listaDeNumerosSorteados.includes(numeroEscolhido)) {
+    return gerarNumeroAleatorio();
+  } else {
+    listaDeNumerosSorteados.push(numeroEscolhido);
+    console.log(listaDeNumerosSorteados);
+    return numeroEscolhido;
+  }
 }
 
 function limparCampo() {
