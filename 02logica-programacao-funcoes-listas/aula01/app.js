@@ -24,7 +24,7 @@ exibirMensagemInicial();
 // se o chute for igual ao numero secreto, eu chamo a funcao exibirTextoNaTela e coloco o texto
 function verificarChute() {
   let chute = document.querySelector("input").value;
-  console.log("TESTANDOOO", chute == numeroSecreto);
+  console.log(chute == numeroSecreto);
   if (chute == numeroSecreto) {
     exibirTextoNaTela("h1", "Acertou");
     let palavraTentativa = tentativas > 1 ? "Tentativas" : "Tentativa";
@@ -49,7 +49,7 @@ function gerarNumeroAleatorio() {
     return gerarNumeroAleatorio();
   } else {
     listaDeNumerosSorteados.push(numeroEscolhido);
-    console.log(listaDeNumerosSorteados);
+    console.log(`${listaDeNumerosSorteados}`);
     return numeroEscolhido;
   }
 }
